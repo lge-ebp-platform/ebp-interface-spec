@@ -78,7 +78,7 @@
 | 응답 | `mId` | 상점아이디(MID) | M/O | String | 14 |  |
 | 응답 | `pmtKey` | 결제의 키 값 | M/O | String | 200 | PG 거래번호<br>네이버 API 월 렌탈료 수납 내역 조회의 `orderId` |
 | 응답 | `contractNo` | 계약번호 | M/O | String | 64 | 계약번호 |
-| 응답 | `recurrenceNumber` | 결제 회차 | M/O | String | 8 | 결제 회차(N회차 결제)<br>네이버 API 월 렌탈료 수납 내역 조회의 `paymentDegreeCount` |
+| 응답 | `recurrenceNumber` | 결제 회차 | M/O | String | 8 | 🔴 **결제 회차(N회차 결제)<br>네이버 API 월 렌탈료 수납 내역 조회의 `paymentDegreeCount`** |
 | 응답 | `RequestAmount` | 결제 요청 금액 | M/O | String | 10 | 결제 요청 금액<br>네이버 API 월 렌탈료 수납 내역 조회의 `paymentRequestAmount` |
 | 응답 | `StatusCode` | 결제 상태 코드 | M/O | String | 10 | 네이버 결제 상태 코드<br>네이버 API 월 렌탈료 수납 내역 조회의 `paymentStatusCode` |
 | 응답 | `paymentRequestAt` | 결제 요청 일자 | M/O | String | 10 | 결제 요청 일자<br>네이버 API 월 렌탈료 수납 내역 조회의 `paymentRequestYmd` |
