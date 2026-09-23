@@ -1,4 +1,4 @@
-# EBP 대외계 연동 규격서
+# <img src="./assets/images/lg_logo.png" alt="LG 로고" width="36" align="absmiddle"> EBP 대외계 연동 규격서
 이 공간은 EBP 대외기관 연동 규격서와 기술지원 정보를 제공하기 위한 공간입니다.
 
 대외기관 연동과 관련한 기술 문의 사항은 
