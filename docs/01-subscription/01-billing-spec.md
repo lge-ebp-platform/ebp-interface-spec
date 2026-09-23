@@ -11,24 +11,13 @@
 ## 1.1 Master Info
 > PG 요청 전문의 **Header와 Tail을 합친 항목**입니다.
 
-| 구분 | Parameter | 한글 파라미터명 | 금결원 | 쿠콘 | 코밴 | 토스 | 네이버 | Type | Max Size | 설명 | 비고 |
+| 구분 | Parameter | 한글명 | 금결원 | 쿠콘 | 코밴 | 토스 | 네이버 | Type | Max Size | 설명 | 비고 |
 |---|---|---|:---:|:---:|:---:|:---:|:---:|---|---:|---|---|
+| 요청 | `payment` | 정기청구 |  |  |  |  |  |  |  |  |
 | 요청/응답 | `itrkDt` | 청구일자 | M | M | M | M | M | String | 8 | 기본 형태: `YYYYMMDD` | 금결원: `YYMMDD`, 코밴: `YYMMDD`, 쿠콘: `YYYYMMDD` |
 | 요청/응답 | `itrkFlNm` | 연동파일명 | M | M | M | M | M | String | 60 | 연동파일명 | 연동파일명 Sheet 참조 |
 | 응답 | `rsltFileCd` | 파일처리결과코드 | O | O | O | O | O | String | 2 | `TS`: 전체 성공, `PS`: 일부 성공, `TF`: 전체 실패, `IS`: PG 연동 성공 | EBP 제공 |
-
-### 1.1.2 VAR 요청 및 응답
-
-> VAR 구분값
-
-| Parameter | 금결원 | 쿠콘 | 코밴 | 토스 | 네이버 |
-|---|---|---|---|---|---|
-| `var` | `kftc` | `coocon` | `kovan` | `toss` | `naver` |
-
-> 요청 및 응답 항목
-
-| 구분 | Parameter | 한글 파라미터명 | 금결원 | 쿠콘 | 코밴 | 토스 | 네이버 | Type | Max Size | 설명 | 비고 |
-|---|---|---|:---:|:---:|:---:|:---:|:---:|---|---:|---|---|
+| 요청 | `var` | kftc/coocon<br>/kovan/toss<br>/naver |
 | 요청/응답 | `totCnt` | 총건수 | M | M | M | M | M | String | 8 | 요청 파일의 총건수 | 숫자만 허용 |
 | 요청/응답 | `totAmt` | 총금액 | M | M | M | M | M | String | 15 | 요청 파일의 금액 | 숫자만 허용 |
 | 요청/응답 | `insttCd` | 기관코드 | M | M | X | X | X | String | 10 | 이용기관 식별코드 | 금결원/쿠콘 기관코드 |
@@ -41,9 +30,9 @@
 | 요청/응답 | `dcrpSmbl` | 복기부호 | X | O | X | X | X | String | 10 | 이체 거래 인증 정보 |  |
 | 요청/응답 | `replInsttCd` | 대표기관코드 | X | O | X | X | X | String | 10 | 대표기관 식별코드 |  |
 
-### 1.1.3 응답 결과
+> 응답 결과
 
-| 구분 | Parameter | 한글 파라미터명 | 금결원 | 쿠콘 | 코밴 | 토스 | 네이버 | Type | Max Size | 설명 | 비고 |
+| 구분 | Parameter | 한글명 | 금결원 | 쿠콘 | 코밴 | 토스 | 네이버 | Type | Max Size | 설명 | 비고 |
 |---|---|---|:---:|:---:|:---:|:---:|:---:|---|---:|---|---|
 | 응답 | `ebpErrCnt` | EBP 검증 오류 건수 | M/O | M/O | M/O | M/O | M/O | String | 8 | EBP 검증 오류 건수 | EBP 제공 |
 | 응답 | `ebpErrAmt` | EBP 검증 오류 금액 | M/O | M/O | M/O | M/O | M/O | String | 15 | EBP 검증 오류 금액 | 금액 없을 시 `0` |
@@ -69,23 +58,12 @@
 
 > Payment List
 
-| 요청/결과 구분 | Parameter | 한글 파라미터명 | 금결원 | 쿠콘 | 코밴 | 토스 | 네이버 | Type | Max Size | 설명 | 비고 |
-|---|---|---|:---:|:---:|:---:|:---:|:---:|---|---:|---|---|
-| 응답 | `reqVrifyCd` | 요청검증결과코드 | M/O | M/O | M/O | M/O | M/O | String | 2 | 요청 개별 처리 결과 값<br>`PY`: 정상처리 완료<br>`PP`: 부분출금 처리<br>`PN`: PG처리오류, `rspsCd` 및 `rspsFailCd` 상세 확인 가능<br>`VE`: EBP 검증 오류 | 요청 개별 처리 결과 값<br>`PY`: 정상처리 완료<br>`PP`: 부분출금 처리<br>`PN`: PG처리오류, `rspsCd` 및 `rspsFailCd` 상세 확인 가능<br>`VE`: EBP 검증 오류 |
-
-## 2.2 VAR 요청 및 응답
-
-> VAR 구분값
-
-| Parameter | 금결원 | 쿠콘 | 코밴 | 토스 | 네이버 |
-|---|---|---|---|---|---|
-| `kftcLst` | `cooconLst` | `kovanLst` | `kovan` | `tossLst` | `naverLst` |
-
-> 요청 항목
-
 | 구분 | Parameter | 한글명 | 금결원 | 쿠콘 | 코밴 | 토스 | 네이버 | Type | Max Size | 설명 | 비고 |
 |---|---|---|:---:|:---:|:---:|:---:|:---:|---|---:|---|---|
-| 요청응답 | `eno` | 일련번호 | M | M | M | M | M | String | 8 | 요청 리스트의 키값 | 일련번호는 중복 허용하지 않음<br>중복 일련번호의 경우 전체 청구 요청 불가<br>Max Size: 금결원 8자리, 쿠콘 7자리 |
+| 요청 | `payment` | 정기청구 |  |  |  |  |  |  |  |  |
+| 응답 | `reqVrifyCd` | 요청검증결과코드 | M/O | M/O | M/O | M/O | M/O | String | 2 | 요청 개별 처리 결과 값<br>`PY`: 정상처리 완료<br>`PP`: 부분출금 처리<br>`PN`: PG처리오류, `rspsCd` 및 `rspsFailCd` 상세 확인 가능<br>`VE`: EBP 검증 오류 | 요청 개별 처리 결과 값<br>`PY`: 정상처리 완료<br>`PP`: 부분출금 처리<br>`PN`: PG처리오류, `rspsCd` 및 `rspsFailCd` 상세 확인 가능<br>`VE`: EBP 검증 오류 |
+| 요청 | `var` | kftc/coocon<br>/kovan/toss<br>/naver |
+| 요청/응답 | `eno` | 일련번호 | M | M | M | M | M | String | 8 | 요청 리스트의 키값 | 일련번호는 중복 허용하지 않음<br>중복 일련번호의 경우 전체 청구 요청 불가<br>Max Size: 금결원 8자리, 쿠콘 7자리 |
 | 요청 | `pmtAmt` | 금액 | M | M | M | M | M | String | 13 | 출금의뢰금액 | 숫자만 허용<br>Max Size: 금결원 13자리, 쿠콘 13자리, 코밴 10자리 |
 | 요청 | `trdDivCd` | 거래구분코드 | X | X | M | X | X | String | 1 | 신용승인: `A`, 체크승인: `C` | 코밴 AS-IS: `A` |
 | 요청 | `cardNo` | 카드번호 | X | X | M | M | M | String | 16 | 네이버: 토큰 ID, 사용자가 결제수단 종류(카드/계좌)와 무관하게 `cardNo` 사용 | 숫자만 허용 |
@@ -108,8 +86,6 @@
 | 요청 | `prdtNm` | 상품명 | X | X | X | M | M | String | 200 | 상품명 연동, 정산기관비<br>네이버: 결제수단 등록 시 사용된 상품 코드와 정확히 일치해야 함 |  |
 | 요청 | `emailId` | 이메일 아이디 | X | X | X | O | X | String | 100 |  | 공백으로 연동 가능<br>토스 연동 규격: 결제 상태가 바뀌면 이메일 주소로 결제내역 전송 |
 | 요청 | `custNm` | 고객명 | X | X | X | M | X | String | 200 | 고객명 |  |
-
-> 2.3 응답 정보
 
 > 2.3 응답 정보
 
