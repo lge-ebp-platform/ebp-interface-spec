@@ -10,12 +10,15 @@
 
 ### 01. 구독
 
-1. [청구 규격서](./docs/01-subscription/01-billing-spec.md)
+1. [청구 연동규격서](./docs/01-subscription/01-billing-spec.md) : 01-billing-spec.md
    - 금결원, 쿠콘, 코밴, 토스, 네이버 청구 요청 및 응답 규격
 
-2. [정산내역](./docs/01-subscription/02-settlement-inquiry-spec.md)
+2. [정산내역](./docs/01-subscription/02-settlement-inquiry-spec.md) : 02-settlement-inquiry-spec.md
    - 대외기관별 정산내역 조회 요청 및 응답 규격
 
+3. [네이버구독관](./docs/01-subscription/03-naver-subscription-spec.md) : 03-naver-subscription-spec.md
+   - 네이버구독관 매입
+   - 네이버구독관 연체
 ---
 
 ## Discussions
