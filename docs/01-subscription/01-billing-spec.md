@@ -28,7 +28,7 @@
 | 요청/응답 | `debpEndDt` | 이체종료일자 | X | O | X | X | X | String | 8 | `YYYYMMDD` | Master Info의 `itrkDt` 대체 |
 | 요청/응답 | `prntAccntNo` | 모계좌번호 | X | M | X | X | X | String | 16 | 쿠콘 5대 은행별 설정 |  |
 | 요청/응답 | `dcrpSmbl` | 복기부호 | X | O | X | X | X | String | 10 | 이체 거래 인증 정보 |  |
-| 요청/응답 | `replInsttCd` | 대표기관코드 | X | O | X | X | X | String | 10 | 대표기관 식별코드 |  |
+| 요청1/응답 | `replInsttCd` | 대표기관코드 | X | O | X | X | X | String | 10 | 대표기관 식별코드 |  |
 
 > 응답 결과
 
