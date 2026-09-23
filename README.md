@@ -21,7 +21,7 @@
 ## Discussions
 
 - **[공지사항](https://github.com/commerce-api-naver/rental/discussions/categories/%EA%B3%B5%EC%A7%80%EC%82%AC%ED%95%AD)** 
-연동 규격 변경, 운영 일정 및 기술지원 관련 공지사항을 확인할 수 있습니다.
+  - 연동 규격 변경, 운영 일정 및 기술지원 관련 공지사항을 확인할 수 있습니다.
  
 - **[묻고 답하기](https://github.com/lge-ebp-platform/ebp-interface-spec/discussions/categories/%EB%AC%BB%EA%B3%A0-%EB%8B%B5%ED%95%98%EA%B8%B0)**
   - 연동 규격서 적용 및 운영 중 발생한 기술 문의 사항을 등록하고 답변받을 수 있습니다.
